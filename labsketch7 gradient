@@ -1,0 +1,40 @@
+let recSize = 50;
+
+let recCount = 8;
+
+let colorGradient = 0;
+
+let gradChange = 1;
+
+function setup() {
+  createCanvas(400, 400);
+  rectMode(CORNER);
+}
+
+function draw() {
+  background(220);
+  noStroke();
+
+  if (mouseIsPressed) {
+    gradChange += 1;
+    if (gradChange > 360) {
+      gradChange = 1;
+    }
+  } else {
+    gradChange -= 1;
+    if (gradChange < 1) {
+      gradChange = 1;
+    }
+  }
+  colorGradient = 0;
+  for (let xCounter = 0; xCounter < recCount; xCounter += 1) {
+    for (let yCounter = 0; yCounter < recCount; yCounter += 1) {
+      fill("hsl(" + colorGradient + ", 50%, 50%)");
+      colorGradient += gradChange;
+      rect(xCounter * recSize, yCounter * recSize, 50);
+      if (colorGradient >= 360) {
+        colorGradient = 0;
+      }
+    }
+  }
+}
