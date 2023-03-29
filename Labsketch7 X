@@ -1,0 +1,29 @@
+let xSize = 35;
+
+let colorArray = [
+  "red",
+  "orange",
+  "yellow",
+  "green",
+  "blue",
+  "indigo",
+  "purple",
+];
+
+function setup() {
+  createCanvas(400, 400);
+  ellipseMode(CORNER);
+  noLoop();
+}
+
+function draw() {
+  background(220);
+  noStroke();
+
+  for (let xCounter = 0; xCounter < 11; xCounter += 1) {
+    fill(random(colorArray));
+    ellipse(xCounter * xSize, xCounter * xSize, 50);
+    fill(random(colorArray));
+    ellipse(350-(xCounter*xSize), xCounter * xSize, 50);
+  }
+}
