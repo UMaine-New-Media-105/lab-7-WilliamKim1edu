@@ -1,1 +1,6 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-8d59dc4de5201274e310e4c54b9627a8934c3b88527886e3b421487c677d23eb.svg)](https://classroom.github.com/a/VOKVqSaw)
+https://editor.p5js.org/william.kim1/sketches/QCA6HFgQn
+https://editor.p5js.org/william.kim1/sketches/i-ty-debp
+
+The first sketch will create a randomly colored X
+
+The second will create a grid that changes gradient when clicked
